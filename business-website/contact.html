@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Digital Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="e:\business-website\css\style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="top-bar">
+        <div class="logo"><h1>Quaid-e-Azam <br> Academy</h1></div>
+        <div class="social-search">
+            <i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-linkedin"></i>
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="file:///E:/business-website/gellery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <div class="container">
+        <div class="page-title">
+            <h2>Get In Touch</h2>
+            <p>We are here to help you. Ask us anything about our courses.</p>
+        </div>
+
+        <div class="contact-box">
+            <!-- LEFT: FORM -->
+            <div class="form-card">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                     <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="int" placeholder="Enter Your phone number" required>
+                     </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Write your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button> 
+                    <br><br>
+                    <button type="submit" class="btn-submit">Reset</button> <button type="submit" class="btn-submit">Submit</button>
+                </form>
+            </div>
+
+            <!-- RIGHT: INFO -->
+            <div class="info-card">
+                <h3>Contact Information</h3>
+                <div class="info-item">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <h4>Our Location</h4>
+                        <p>123 Main Boulevard, Gulberg III<br>Lahore, Punjab, Pakistan</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <p>+92 300 1234567<br>+92 42 12345678</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <p>info@digitalacademy.com<br>support@digitalacademy.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                   <div class="contact">
+    <h4>Get Free Consultation</h4>
+    <P>Confused which course to choose? Talk to our counselor today!</p>
+    <a href="contact.html" >Book Now</a>
+</div>
+            </div>
+        </div>
+
+        <!-- GOOGLE MAP -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27225.5!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzEzLjQiTiA3NMKwMjEnMzEuMyJF!5e0!3m2!1sen!2s!4v123456789"></iframe>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Digital Academy</h3>
+                <p>Learn skills that get you hired. Online courses with certificates from industry experts.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-location-dot"></i> Lahore, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 300 1234567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Digital Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+      <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".form-card form");
+
+    // Message show karne ke liye box bana dete hain
+    const msgBox = document.createElement("div");
+    msgBox.style.marginTop = "15px";
+    msgBox.style.padding = "12px";
+    msgBox.style.borderRadius = "6px";
+    msgBox.style.fontWeight = "500";
+    msgBox.style.display = "none";
+    form.appendChild(msgBox);
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); // page reload na ho
+
+        // Saare inputs le lo
+        const name = form.querySelector('input[placeholder="Enter your name"]').value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const phone = form.querySelector('input[placeholder="Enter Your phone number"]').value.trim();
+        const subject = form.querySelector('input[placeholder="Subject"]').value.trim();
+        const message = form.querySelector("textarea").value.trim();
+
+        let error = "";
+
+        // Validation Check
+        if(name === "") {
+            error = "❌ Please enter your full name";
+        }
+        else if(email === "") {
+            error = "❌ Please enter your email address";
+        }
+        else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            error = "❌ Please enter a valid email. Ex: name@email.com";
+        }
+        else if(phone === "") {
+            error = "❌ Please enter your phone number";
+        }
+        else if(!/^[0-9]{11}$/.test(phone)) {
+            error = "❌ Phone number must be 11 digits. Ex: 03001234567";
+        }
+        else if(message === "") {
+            error = "❌ Please write your message";
+        }
+
+        // Agar error hai to red me show karo
+        if(error !== "") {
+            msgBox.style.display = "block";
+            msgBox.style.background = "#ffe6e6";
+            msgBox.style.color = "#cc0000";
+            msgBox.style.border = "1px solid #cc0000";
+            msgBox.innerHTML = error;
+            return;
+        }
+
+        // Agar sab sahi hai to success
+        msgBox.style.display = "block";
+        msgBox.style.background = "#e6ffea";
+        msgBox.style.color = "#006600";
+        msgBox.style.border = "1px solid #006600";
+        msgBox.innerHTML = "✅ Thank you " + name + "! Your message has been sent successfully. We will contact you soon.";
+
+        // 3 sec baad form reset aur message hide
+        setTimeout(() => {
+            form.reset();
+            msgBox.style.display = "none";
+        }, 3000);
+
+        // Yahan data console me aa jaye ga. Baad me isko PHP/Node se connect kar sakte ho
+        console.log("Form Data:", {name, email, phone, subject, message});
+    });
+});
+</script>
+
+</body>
+</html>
